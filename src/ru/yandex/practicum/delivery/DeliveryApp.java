@@ -7,11 +7,11 @@ import java.util.Scanner;
 public class DeliveryApp {
 
     private static final Scanner scanner = new Scanner(System.in);
-    private static List<Parcel> allParcels = new ArrayList<>();
-    private static List<Trackable> trackableParcels = new ArrayList<>();
-    private static ParcelBox<StandardParcel> standardBox = new ParcelBox<>(100.0);
-    private static ParcelBox<FragileParcel> fragileBox = new ParcelBox<>(50);
-    private static ParcelBox<PerishableParcel> perishableBox = new ParcelBox<>(80);
+    private static final List<Parcel> allParcels = new ArrayList<>();
+    private static final List<Trackable> trackableParcels = new ArrayList<>();
+    private static final ParcelBox<StandardParcel> standardBox = new ParcelBox<>(100.0);
+    private static  final ParcelBox<FragileParcel> fragileBox = new ParcelBox<>(50);
+    private static  final ParcelBox<PerishableParcel> perishableBox = new ParcelBox<>(80);
 
     public static void main(String[] args) {
         boolean running = true;
@@ -54,10 +54,10 @@ public class DeliveryApp {
         System.out.println("0 — Завершить");
     }
 
-    // реализуйте методы ниже
+
 
     private static void addParcel() {
-        // Подсказка: спросите тип посылки и необходимые поля, создайте объект и добавьте в allParcels
+
         System.out.println("Введите описание посылки!");
         String description = scanner.nextLine();
         System.out.println("Введите вес посылки");

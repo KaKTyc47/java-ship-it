@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ParcelBox<T extends Parcel> {
-    private ArrayList<T> listBox = new ArrayList<>();
-    private double maxWeightBox;
+    private final ArrayList<T> listBox = new ArrayList<>();
+    private final double maxWeightBox;
 
     public ParcelBox(double maxWeightBox) {
         this.maxWeightBox = maxWeightBox;
@@ -25,7 +25,7 @@ public class ParcelBox<T extends Parcel> {
     }
 
     public List<T> getAllParcels() {
-        return listBox;
+        return new ArrayList<>(listBox);
     }
 
 }
